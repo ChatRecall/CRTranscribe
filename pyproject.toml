@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CRTranscribe"
+version = "0.1.0"
+dependencies = [
+    "pipdeptree==2.24.0",
+    "requests>=2.32.3",
+    "PySide6>=6.8.1"
+]
+
+[tool.setuptools]
+packages = ["CRTranscribe"]
+
+[project.scripts]
+crtranscribe = "CRTranscribe.CRTranscribe:transcribe_fe"
